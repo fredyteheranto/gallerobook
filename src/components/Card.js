@@ -7,9 +7,9 @@ export const CardEjemplares = ({
   pluma,
   estado,
 }) => (
-  <div className="w-full md:w-4/12">
+  <div className="w-full md:w-3/12">
     <div className="p-2">
-      <div className="p-4 rounded-3xl" style={{ backgroundColor: '#fff' }}>
+      <div className="p-4 rounded" style={{ backgroundColor: '#fff' }}>
         <div className="flex justify-between pt-0 relative">
           <div className="flex items-center">
             <div className="flex space-x-2 justify-center">

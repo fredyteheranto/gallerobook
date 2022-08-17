@@ -9,13 +9,17 @@ const Ejemplares = ({ title }) => {
   };
   return (
     <div className="flex flex-wrap">
-      <div className="w-full lg:w-8/12 bg-gray-800 py-6 px-6 rounded-3xl">
+      <div className="w-full lg:w-12/12 bg-gray-800 py-6 px-6 rounded">
         <div className="flex justify-between text-white items-center mb-8">
-          <p className="text-2xl font-bold">{title}</p>
+          <p className="text-2xl font-bold">Mis {title}</p>
 
           <button className="">
             {' '}
-            <ModalGallero name="Agregar Ejemplar" subtmit={guardaData}>
+            <ModalGallero
+              name={'Agregar ' + title}
+              type={title}
+              subtmit={guardaData}
+            >
               <FormGeneric />
             </ModalGallero>
           </button>
@@ -30,11 +34,38 @@ const Ejemplares = ({ title }) => {
             pluma="Gallino"
             marca="0"
             estado="0"
+          />{' '}
+          <CardEjemplares
+            fecha="12-12-12"
+            nombre="01902"
+            imagen="https://i.postimg.cc/JnMSd1Bs/Whats-App-Image-2022-08-15-at-8-46-03-AM.jpg"
+            trabajos="3 trabajos"
+            pluma="Gallino"
+            marca="0"
+            estado="0"
+          />{' '}
+          <CardEjemplares
+            fecha="12-12-12"
+            nombre="01902"
+            imagen="https://i.postimg.cc/JnMSd1Bs/Whats-App-Image-2022-08-15-at-8-46-03-AM.jpg"
+            trabajos="3 trabajos"
+            pluma="Gallino"
+            marca="0"
+            estado="0"
+          />{' '}
+          <CardEjemplares
+            fecha="12-12-12"
+            nombre="01902"
+            imagen="https://i.postimg.cc/JnMSd1Bs/Whats-App-Image-2022-08-15-at-8-46-03-AM.jpg"
+            trabajos="3 trabajos"
+            pluma="Gallino"
+            marca="0"
+            estado="0"
           />
         </div>
       </div>
-      <div className="w-full mt-8 lg:mt-0 lg:w-4/12 lg:pl-4">
-        <div className="bg-gray-800 rounded-3xl px-6 pt-6">
+      {/* <div className="w-full mt-8 lg:mt-0 lg:w-4/12 lg:pl-4">
+        <div className="bg-gray-800 rounded px-6 pt-6">
           <div className="flex text-white text-2xl pb-6 font-bold">
             <p>Relación de Madres</p>
           </div>
@@ -47,7 +78,7 @@ const Ejemplares = ({ title }) => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
