@@ -1,18 +1,21 @@
 import { useRouter } from 'next/router';
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import DashboardLayout from '../../../../dashboard/layout';
+import DashboardLayout from '../../../dashboard/layout';
 
-const Camadas = () => {
+const Aves = () => {
+  const router = useRouter();
+  const { idDetails } = router.query;
+  console.log(idDetails);
   return (
     <>
       <Head>
-        <title>Salvia-kit Dashboard v4 Next.js</title>
+        <title>Detalle de {idDetails ? idDetails : 'page Not Foundddd'}</title>
       </Head>
       <DashboardLayout>
         <div className="flex flex-wrap">
           <div className="w-full lg:w-12/12 bg-gray-800 py-6 px-6 rounded">
-            Camadas
+            Detalle de {idDetails}
           </div>
         </div>
       </DashboardLayout>
@@ -20,4 +23,4 @@ const Camadas = () => {
   );
 };
 
-export default Camadas;
+export default Aves;
