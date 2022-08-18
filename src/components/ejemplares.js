@@ -15,11 +15,7 @@ const Ejemplares = ({ title }) => {
 
           <button className="">
             {' '}
-            <ModalGallero
-              name={'Agregar ' + title}
-              type={title}
-              subtmit={guardaData}
-            >
+            <ModalGallero name={'Agregar ' + title} type={title} subtmit={guardaData}>
               <FormGeneric />
             </ModalGallero>
           </button>

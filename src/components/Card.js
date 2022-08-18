@@ -1,22 +1,11 @@
-export const CardEjemplares = ({
-  imagen,
-  fecha,
-  nombre,
-  trabajos,
-  marca,
-  pluma,
-  estado,
-}) => (
+export const CardEjemplares = ({ imagen, fecha, nombre, trabajos, marca, pluma, estado }) => (
   <div className="w-full md:w-3/12">
     <div className="p-2">
       <div className="p-4 rounded" style={{ backgroundColor: '#fff' }}>
         <div className="flex justify-between pt-0 relative">
           <div className="flex items-center">
             <div className="flex space-x-2 justify-center">
-              <p className="text-base font-bold opacity-70">
-                {' '}
-                Nombre : #{nombre}
-              </p>
+              <p className="text-base font-bold opacity-70"> Nombre : #{nombre}</p>
             </div>
           </div>
           <div className="flex space-x-2 justify-center">

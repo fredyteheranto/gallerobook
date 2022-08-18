@@ -43,11 +43,7 @@ export default function DashboardProvider({ children }) {
     return () => window.removeEventListener('click', handleOutsideClick);
   }, [open, ref]);
 
-  return (
-    <Context.Provider value={{ open, ref, toggle }}>
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ open, ref, toggle }}>{children}</Context.Provider>;
 }
 
 // custom hook to consume all context values { open, ref, toggle }

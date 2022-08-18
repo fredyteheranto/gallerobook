@@ -10,19 +10,13 @@ import { auth } from 'utils/firebase';
 
 const useAuthFire = () => {
   async function singIn(email, password) {
-    return await signInWithEmailAndPassword(auth, email, password).then(
-      (userCredential) => {
-        return userCredential.user;
-      },
-    );
+    return await signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      return userCredential.user;
+    });
   }
 
   async function createUser(email, password) {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password,
-    );
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     await sendEmailVerification(userCredential.user);
     return userCredential.user;
   }

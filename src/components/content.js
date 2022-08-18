@@ -64,10 +64,7 @@ const Content = ({ title }) => (
       <div className="flex flex-wrap">
         <div className="w-full md:w-4/12">
           <div className="p-2">
-            <div
-              className="p-4 rounded-3xl"
-              style={{ backgroundColor: '#fee4cb' }}
-            >
+            <div className="p-4 rounded-3xl" style={{ backgroundColor: '#fee4cb' }}>
               <div className="flex items-center justify-b">
                 <span className="text-sm">December 10, 2020</span>
               </div>
@@ -418,8 +415,8 @@ const Content = ({ title }) => (
                 </div>
               </div>
               <p className="my-2 text-sm text-gray-400">
-                I got your first assignment. It was quite good. 🥳 We can
-                continue with the next assignment.
+                I got your first assignment. It was quite good. 🥳 We can continue with the next
+                assignment.
               </p>
               <p className="text-right text-gray-400 text-sm">Dec, 12</p>
             </div>
@@ -451,8 +448,7 @@ const Content = ({ title }) => (
                 </div>
               </div>
               <p className="my-2 text-sm text-gray-400">
-                Hey, can tell me about progress of project? I'm waiting for your
-                response.
+                Hey, can tell me about progress of project? I'm waiting for your response.
               </p>
               <p className="text-right text-gray-400 text-sm">Dec, 12</p>
             </div>
@@ -484,8 +480,7 @@ const Content = ({ title }) => (
                 </div>
               </div>
               <p className="my-2 text-sm text-gray-400">
-                Hey, can tell me about progress of project? I'm waiting for your
-                response.
+                Hey, can tell me about progress of project? I'm waiting for your response.
               </p>
               <p className="text-right text-gray-400 text-sm">Dec, 12</p>
             </div>

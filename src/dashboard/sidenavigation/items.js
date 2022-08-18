@@ -21,14 +21,10 @@ export default function SidenavItems() {
         {data.map((item) => (
           <Link href={item.link} key={item.title}>
             <a className={style.link}>
-              <div
-                className={`p-2 ${item.link === asPath ? style.active : ''}`}
-              >
+              <div className={`p-2 ${item.link === asPath ? style.active : ''}`}>
                 <span>{item.icon}</span>
               </div>
-              <span
-                className={`${style.title} ${open ? style.open : style.close}`}
-              >
+              <span className={`${style.title} ${open ? style.open : style.close}`}>
                 {item.title}
               </span>
             </a>

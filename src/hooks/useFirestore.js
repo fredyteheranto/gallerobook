@@ -71,11 +71,7 @@ const useFirestore = () => {
   };
 
   const getDataMoreWhere = async (collectionName, funcWhere) => {
-    const q = query(
-      collection(Db, collectionName),
-      funcWhere,
-      where('active', '==', true),
-    );
+    const q = query(collection(Db, collectionName), funcWhere, where('active', '==', true));
 
     const data = await getDocs(q);
 
@@ -86,13 +82,7 @@ const useFirestore = () => {
     }));
   };
 
-  const getDataWhere = async (
-    collectionName,
-    filter,
-    operator,
-    valor,
-    callback,
-  ) => {
+  const getDataWhere = async (collectionName, filter, operator, valor, callback) => {
     const q = query(
       collection(Db, collectionName),
       where(filter, operator, valor),
@@ -133,10 +123,7 @@ const useFirestore = () => {
   };
 
   async function getDocumentsSubscribe(collectionName, callback) {
-    const q = query(
-      collection(Db, collectionName),
-      where('active', '==', true),
-    );
+    const q = query(collection(Db, collectionName), where('active', '==', true));
 
     return onSnapshot(q, (snapshot) => {
       const docs = [];
@@ -152,13 +139,7 @@ const useFirestore = () => {
     });
   }
 
-  const getDocumentsWhereSubscribe = async (
-    collectionName,
-    filter,
-    operator,
-    valor,
-    callback,
-  ) => {
+  const getDocumentsWhereSubscribe = async (collectionName, filter, operator, valor, callback) => {
     const q = query(
       collection(Db, collectionName),
       where(filter, operator, valor),
