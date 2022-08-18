@@ -42,6 +42,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.7.0-next-19e9a4c68-20220818",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.5.0",
     "eslint-config-next": "^12.0.7",
