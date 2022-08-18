@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import useAuthFire from 'hooks/useAuthFire';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from 'utils/firebase';
 import useFirestore from 'hooks/useFirestore';
+import useAuthFire from 'hooks/useAuthFire';
+import { auth } from 'utils/firebase';
 
 // Context
 const AppContext = createContext();

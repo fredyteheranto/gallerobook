@@ -16,7 +16,7 @@ const loginSchema = Yup.object().shape({
 
 const initialValues = {
   fullName: '',
-  phone: null,
+  phone: '',
   email: '',
   username: '',
   password: '',
@@ -179,7 +179,7 @@ const RegisterForm = () => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
             >
-              Log in
+              Register
             </button>
           </div>
           <div className="flex items-center justify-between pb-6">
