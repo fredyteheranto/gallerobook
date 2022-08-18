@@ -35,20 +35,8 @@ export default function Register() {
     });
   };
 
-  const signUpWithGithub = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((response) => {
-        sessionStorage.setItem('Token', response.user.accessToken);
-        console.log(response.user);
-        router.push('/home');
-      })
-      .catch((err) => {
-        alert('Email Already Exists');
-      });
-  };
-
   useEffect(() => {
-    let token = sessionStorage.getItem('Token');
+    const token = sessionStorage.getItem('Token');
 
     if (token) {
       router.push('/home');

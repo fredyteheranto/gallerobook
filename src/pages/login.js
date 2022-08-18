@@ -1,43 +1,9 @@
-import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
-import { app } from '../../firebaseConfig';
-import { useEffect } from 'react';
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  signInWithPopup,
-} from 'firebase/auth';
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+
 export default function Register() {
-  const auth = getAuth();
-  const googleProvider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
-  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const signUp = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((response) => {
-        console.log(response.user);
-        sessionStorage.setItem('Token', response.user.accessToken);
-        router.push('/dashboard');
-      })
-      .catch((err) => {
-        alert('Cannot Log in');
-      });
-  };
-
-  useEffect(() => {
-    let token = sessionStorage.getItem('Token');
-
-    if (token) {
-      router.push('/dashboard');
-    }
-  }, []);
 
   return (
     <div className={styles.container}>
@@ -89,7 +55,6 @@ export default function Register() {
                             type="button"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
-                            onClick={signUp}
                           >
                             Log in
                           </button>

@@ -13,7 +13,7 @@ const TypoAves = () => {
   return (
     <>
       <Head>
-        <title>Mis {typeAve ? typeAve : 'page Not Foundddd'}</title>
+        <title>Mis {typeAve || 'page Not Foundddd'}</title>
       </Head>
 
       <DashboardLayout>

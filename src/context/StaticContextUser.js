@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import useAuthFire from 'hooks/useAuthFire';
-import { useHistory } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from 'utils/firebase';
 import useFirestore from 'hooks/useFirestore';
@@ -12,7 +11,6 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const { logout } = useAuthFire();
   const { getData } = useFirestore();
-  const history = useHistory();
   const [userAuth, loadingAuth] = useAuthState(auth);
   const [loading, setLoading] = useState(loadingAuth);
   const [user, setUser] = useState(userAuth);
@@ -59,7 +57,6 @@ export const AppContextProvider = ({ children }) => {
     logout();
     setAuthId(null);
     setIsSession(false);
-    history.replace('/login');
   }
 
   const values = useMemo(

@@ -1,11 +1,17 @@
-import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
+import RootRoute from '../components/RootRoute';
 import '../styles/global.css';
-function MyApp({ Component, pageProps }) {
+import { AppContextProvider } from 'context/StaticContextUser';
+
+function MyApp(props) {
+  const { Component, pageProps, router } = props;
+
   return (
-    <>
-      <Component {...pageProps} />
-    </>
+    <AppContextProvider>
+      <RootRoute router={router}>
+        <Component {...pageProps} />
+      </RootRoute>
+    </AppContextProvider>
   );
 }
 

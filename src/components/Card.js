@@ -22,7 +22,7 @@ export const CardEjemplares = ({
           <div className="flex space-x-2 justify-center">
             <p className="text-base font-bold opacity-70">
               <span className="text-xs inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-green-500 text-white rounded">
-                {estado == '1' ? 'De pelea' : 'Trabajando'}
+                {estado === '1' ? 'De pelea' : 'Trabajando'}
               </span>
             </p>
           </div>
@@ -34,9 +34,8 @@ export const CardEjemplares = ({
               height="200px"
               width="200px"
               src={
-                imagen
-                  ? imagen
-                  : 'https://i.postimg.cc/qMJDfbR5/Whats-App-Image-2022-08-15-at-10-41-48-AM.jpg'
+                imagen ||
+                'https://i.postimg.cc/qMJDfbR5/Whats-App-Image-2022-08-15-at-10-41-48-AM.jpg'
               }
               style={{ margin: '0 auto' }}
               alt="participant"
@@ -63,7 +62,7 @@ export const CardEjemplares = ({
           </div>
           <div className="flex space-x-2 justify-center">
             <span className="text-xs inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-400 text-white rounded">
-              {marca == 0 ? 'No marcado' : 'Marca ' + marca}
+              {marca === 0 ? 'No marcado' : 'Marca ' + marca}
             </span>
           </div>
         </div>

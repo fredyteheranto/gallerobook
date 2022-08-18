@@ -7,7 +7,7 @@ export default function TopNavigation() {
     sessionStorage.removeItem('Token');
     router.push('/login');
   };
-  let router = useRouter();
+  const router = useRouter();
   return (
     <header className="h-20 items-center relative z-10">
       <div className="flex flex-center flex-col h-full justify-center mx-auto relative px-3 text-white z-10">

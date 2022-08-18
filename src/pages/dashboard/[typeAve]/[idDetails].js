@@ -10,7 +10,7 @@ const Aves = () => {
   return (
     <>
       <Head>
-        <title>Detalle de {idDetails ? idDetails : 'page Not Foundddd'}</title>
+        <title>Detalle de {idDetails || 'page Not Foundddd'}</title>
       </Head>
       <DashboardLayout>
         <div className="flex flex-wrap">
