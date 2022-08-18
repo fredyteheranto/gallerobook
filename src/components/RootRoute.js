@@ -2,8 +2,8 @@ import React from 'react';
 import useAppContext from '../context/StaticContextUser';
 import LoadingPage from './LoadingPage';
 
-const ROUTES_PRIVATE = ['/dashboard'];
-const ROUTES_AUTH = ['/login', '/register'];
+const ROUTES_PRIVATE = ['/dashboard', '/'];
+const ROUTES_AUTH = ['/login', '/register', '/'];
 
 const isBrowser = () => typeof window !== 'undefined';
 
