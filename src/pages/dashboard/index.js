@@ -1,7 +1,7 @@
-import Ejemplares from '../components/ejemplares';
-import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-import DashboardLayout from '../dashboard/layout';
+import Ejemplares from 'src/components/ejemplares';
+import DashboardLayout from 'src/dashboard/layout';
+
 export default function HomePage() {
   return (
     <>

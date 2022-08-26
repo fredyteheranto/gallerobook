@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const ModalGallero = ({ name, children, subtmit, type }) => {
-  console.log(subtmit);
   const [showModal, setShowModal] = useState(false);
   return (
     <>
